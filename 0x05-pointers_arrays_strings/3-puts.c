@@ -1,22 +1,16 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- *_puts - what is there are no computers
- * @str: string to print
- *
- * Description: prints a string
- * On success: returns no error
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
  */
-
 void _puts(char *str)
 {
-	int i = 0;
+	int i;
 
-	while (*(str + i) != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		putchar(*(str + i));
-		i++;
+		_putchar(str[i]);
 	}
-	putchar(10);
+	_putchar('\n');
 }
